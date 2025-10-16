@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const useModel=new mongoose.Schema({
+const userModel=new mongoose.Schema({
     fullName:{
         type:String,
         required:true
@@ -22,5 +22,5 @@ const useModel=new mongoose.Schema({
         enum:["male","female"],
         required:true
     }
-});
-export const user=mongoose.model("User","useModel")
+},{timestamps:true});
+export const User=mongoose.model("User",userModel)
